@@ -1,0 +1,14 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "description": "Sure, here's a basic template for your README.md file:",
+  "main": "index.js",
+  "scripts": {
+    "start-apps": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
