@@ -67,4 +67,4 @@ const products = [
   
 
 
-  module.exports ={ seedindProducts:products, seedingUsers:users};
+  module.exports ={ seedingProducts:products, seedingUsers:users};
