@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
-
+const dotenv = require('dotenv');
 // Define your MongoDB connection URI
-const MONGODB_URI = process.env.MONGODB_URI ?? 'mongodb://localhost:27017/o-store';
+const MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI || 'mongodb://localhost:27017/o-store';
 
+// Load the environment variables from the.env file
+dotenv.config();
 // Function to connect to the MongoDB database
 async function connectToDatabase() {
     try {

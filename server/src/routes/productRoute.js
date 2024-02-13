@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const ProductModel = require("../models/ProductModel");
+const { productSeeder } = require("../utils/seeders");
 
 // CREATE
 router.post("/", async (req, res) => {
@@ -23,6 +24,7 @@ router.post("/", async (req, res) => {
 // READ
 router.get("/", async (req, res) => {
   try {
+    await productSeeder(seedingProducts);
     const products = await ProductModel.find();
     res.json(products);
   } catch (error) {

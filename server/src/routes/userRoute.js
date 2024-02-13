@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const UserModel = require("../models/UserModel");
+const { userSeeder } = require("../utils/seeders");
+const { seedingUsers } = require("../utils/data");
 
 // CREATE
 router.post("/", async (req, res) => {
@@ -29,6 +31,7 @@ router.get("/:id", async (req, res) => {
 // READ
 router.get("/", async (req, res) => {
   try {
+    await userSeeder(seedingUsers)
     const data = await UserModel.find();
     res.json(data);
   } catch (error) {
