@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const ProductModel = require("../models/ProductModel");
 const { productSeeder } = require("../utils/seeders");
+const {seedingProducts} = require("../utils/data");
 
 // CREATE
 router.post("/", async (req, res) => {
