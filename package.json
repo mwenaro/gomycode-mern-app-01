@@ -4,11 +4,17 @@
   "description": "Sure, here's a basic template for your README.md file:",
   "main": "index.js",
   "scripts": {
-    "start-apps": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd server && npm run dev",
-    "client": "cd client && npm run dev"
+    "start-apps": "concurrently  \"npm run server\" \"npm run client\"",
+    "server": "cd server &&  npm run dev",
+    "client": "cd client &&  npm run dev",
+    "init-app": "npm i && concurrently  \"npm run init:client\" \"npm run init:server\"",
+    "init:client": "cd client && npm i",
+    "init:server": "cd server && npm i"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
